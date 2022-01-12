@@ -1,0 +1,47 @@
+{
+    // 使用 IntelliSense 了解相关属性。
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Python: launch",
+        "type": "python",
+        "request": "launch",
+        "python": "/data/huangxiaofeng/anaconda3/bin/python",
+        "program": "./tests/python/unittest/test_runtime_rpc.py",
+        "console": "integratedTerminal",
+        "cwd": "${workspaceFolder}",
+        "stopOnEntry": true,
+        "justMyCode": false,
+        "outputCapture": "std"
+      },
+      {
+        "name": "GDB for tvm_rpc",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/build/tvm_rpc",
+        "args": [
+          "server",
+          "--host",
+          "192.168.33.205"
+        ],
+        "cwd": "${workspaceFolder}/build",
+        "setupCommands": [
+          {
+            "text": "-gdb-set follow-fork-mode child"
+          }
+        ]
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Launch JavaScript",
+        "program": "${file}",
+        "env": {
+          "PYTHONPATH": "${workspaceFolder}/python:${env:PYTHONPATH}",
+          "LD_LIBRARY_PATH": "${workspaceFolder}/build:${env:LD_LIBRARY_PATH}"
+        }
+      }
+    ]
+  }

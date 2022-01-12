@@ -1,0 +1,22 @@
+{
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}/python;${env:PYTHONPATH}"
+    },
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/python"
+    ],
+    "python.envFile": "${workspaceFolder}/.env",
+    "python.formatting.provider": "yapf",
+    "python.formatting.yapfArgs": [
+        "--style",
+        "{column_limit: 120}"
+    ],
+    "editor.formatOnSave": true,
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "ffi_navigator.pythonpath": "/data/huangxiaofeng/anaconda3/bin/python3",
+    "files.associations": {
+        "optional": "cpp",
+        "functional": "cpp",
+        "utility": "cpp"
+    }
+}
