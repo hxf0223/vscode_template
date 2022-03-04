@@ -12,7 +12,12 @@
         "{column_limit: 120}"
     ],
     "editor.formatOnSave": true,
-    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "cmake.buildDirectory": "${workspaceFolder}/output/cpu_simu_dev",
+    "C_Cpp.intelliSenseEngine": "Disabled",
+    "C_Cpp.autocomplete": "Disabled",   // So you don't get autocomplete from both extensions.
+    "C_Cpp.errorSquiggles": "Disabled", // So you don't get error squiggles from both extensions (clangd's seem to be more reliable anyway).
+    "clangd.path": "/data/huangxiaofeng/opt/llvm/bin/clangd",
+    "clangd.arguments": ["-log=verbose", "-pretty", "--background-index", "--compile-commands-dir=${workspaceFolder}/output/cpu_simu_dev/"],
     "ffi_navigator.pythonpath": "/data/huangxiaofeng/anaconda3/bin/python3",
     "files.associations": {
         "optional": "cpp",
