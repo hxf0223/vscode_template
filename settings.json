@@ -1,8 +1,10 @@
 {
+    "python.languageServer": "Pylance",
     "terminal.integrated.env.linux": {
         "PYTHONPATH": "${workspaceFolder}/python;${env:PYTHONPATH}"
     },
     "python.analysis.extraPaths": [
+        "/home/hxf0223/work/detvm_runtime/python",
         "${workspaceFolder}/python"
     ],
     "python.envFile": "${workspaceFolder}/.env",
