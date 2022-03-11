@@ -10,3 +10,6 @@
 "clangd.arguments": ["-log=verbose", "-pretty", "--background-index", "--compile-commands-dir=${workspaceFolder}/output/cpu_simu_dev/"],
 ```
 
+#### clangd配置文件
+- [clangd Configuration](https://clangd.llvm.org/config)
+
