@@ -19,7 +19,13 @@
     "C_Cpp.autocomplete": "Disabled",   // So you don't get autocomplete from both extensions.
     "C_Cpp.errorSquiggles": "Disabled", // So you don't get error squiggles from both extensions (clangd's seem to be more reliable anyway).
     "clangd.path": "/data/huangxiaofeng/opt/llvm/bin/clangd",
-    "clangd.arguments": ["-log=verbose", "-pretty", "--background-index", "--compile-commands-dir=${workspaceFolder}/output/cpu_simu_dev/"],
+    "clangd.arguments": [
+        "-log=verbose",
+        "-pretty",
+        "--background-index",
+        "--compile-commands-dir=${workspaceFolder}/output/cpu_simu_dev/",
+        "--query-driver=/opt/arm-fullhanv3-linux-uclibcgnueabi-b6/bin/arm-fullhanv3-linux-uclibcgnueabi-g++"
+    ],
     "ffi_navigator.pythonpath": "/data/huangxiaofeng/anaconda3/bin/python3",
     "files.associations": {
         "optional": "cpp",
